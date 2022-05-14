@@ -9,6 +9,7 @@ const useWordle = (solution) => {
     const [history, setHistory] = useState([]) // each guess is a string
     const [isCorrect, setIsCorrect] = useState(false)
     const [usedKeys, setUsedKeys] = useState({})
+    const [isValid, setIsValid] = useState(true)
 
     // Format a guess into an array of letter objects
     const formatGuess = () => {
@@ -40,6 +41,7 @@ const useWordle = (solution) => {
     // Update the isCorrect state if the guess is correct
     // add one to the turn state
     const addNewGuess = (formattedGuess) => {
+        console.log(currentGuess)
         if (currentGuess === solution) {
             setIsCorrect(true)
         }
