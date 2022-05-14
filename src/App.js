@@ -11,6 +11,7 @@ function App() {
     setSolution(randomSol)
   }, [setSolution])
 
+
   return (
     <div className="App">
       <h1>Rahul's Wordle</h1>

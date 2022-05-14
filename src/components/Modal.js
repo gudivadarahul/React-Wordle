@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Modal({isCorrect, turn, solution}) {
+    console.log(solution)
   return (
     <div className="modal">
         {isCorrect && (
@@ -13,8 +14,7 @@ export default function Modal({isCorrect, turn, solution}) {
         {!isCorrect && (
             <div>
                 <h1>You Lose!</h1>
-                <p className="solution">{solution}</p>
-                <p>Better luck next time!</p>
+                <p className="solution">The word was: {solution}</p>
             </div>
         )}
     </div>
